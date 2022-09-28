@@ -1,0 +1,8 @@
+.side-component {
+    position: fixed;
+    margin: 20px;
+}
+
+.my-info {
+    display: flex
+}
