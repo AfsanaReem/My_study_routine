@@ -1,16 +1,86 @@
 .side-component {
     margin: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .my-info {
-    display: flex
+    display: flex;
+
+}
+
+.my-info h4 small {
+    display: flex;
+}
+
+.my-info h4 {
+    margin-left: 15px;
 }
 
 .credit-info {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d6d7d7;
+    margin-top: 20px;
+}
+
+.credit-info h4 {
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .credit-info h4 small {
     display: flex;
-    margin-right: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+h3 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.break {
+    background-color: #d6d7d7;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.break button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    background-color: #a5a5a5;
+    border: 0;
+}
+
+.break button:hover {
+    color: white;
+    background-color: #755959;
+}
+
+.header4 {
+    background-color: #d6d7d7;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    padding-left: 10px;
+}
+
+.toast-button {
+    padding: 15px 60px;
+    border-radius: 5px;
+    background-color: #a5a5a5;
+    border: 0;
+
+}
+
+.toast-button:hover {
+    color: white;
+    background-color: #755959;
 }
