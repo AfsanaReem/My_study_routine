@@ -12,5 +12,5 @@
 
 .side-container {
     background-color: linen;
-    position: relative;
+    position: sticky;
 }

@@ -1,8 +1,16 @@
 .side-component {
-    position: fixed;
     margin: 20px;
 }
 
 .my-info {
     display: flex
+}
+
+.credit-info {
+    display: flex;
+}
+
+.credit-info h4 small {
+    display: flex;
+    margin-right: 30px;
 }
