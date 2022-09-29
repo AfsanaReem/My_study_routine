@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Sidebar.css'
-const Sidebar = () => {
+const Sidebar = ({ addedTime }) => {
+    const [breakTime, setBreakTime] = useState(0);
+    const breakButton = time => setBreakTime(time)
     return (
         <div className='side-component'>
             <div className='my-info'>
-                <img src='favicon.ico'></img>
+                <img src='women.png' alt=''></img>
                 <h4>Afsana Rahman <small>BSc in CSE</small></h4>
             </div>
             <div className='credit-info'>
@@ -14,14 +16,14 @@ const Sidebar = () => {
             </div>
             <h3>Add A Break</h3>
             <div className='break'>
-                <button>10min</button>
-                <button>20min</button>
-                <button>30min</button>
-                <button>40min</button>
+                <button onClick={() => breakButton(10)}>10min</button>
+                <button onClick={() => breakButton(20)}>20min</button>
+                <button onClick={() => breakButton(30)}>30min</button>
+                <button onClick={() => breakButton(40)}>40min</button>
             </div>
             <h3>Study Details</h3>
-            <h4 className='header4'>Study Time: { }min</h4>
-            <h4 className='header4'>Break Time: { }min</h4>
+            <h4 className='header4'>Study Time: {addedTime}hr</h4>
+            <h4 className='header4'>Break Time: {breakTime}min</h4>
             <button className='toast-button'>Study Complete</button>
         </div>
     );

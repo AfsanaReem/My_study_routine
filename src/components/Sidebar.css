@@ -1,14 +1,14 @@
 .side-component {
     margin: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
     position: fixed;
-
 }
 
 .my-info {
     display: flex;
+}
 
+.my-info img {
+    padding: 10px 0;
 }
 
 .my-info h4 small {
@@ -85,4 +85,10 @@ h3 {
 .toast-button:hover {
     color: white;
     background-color: #755959;
+}
+
+@media screen and (min-device-width: 375px) and (max-device-width: 667px) {
+    .side-component {
+        position: absolute;
+    }
 }

@@ -1,6 +1,6 @@
 .course {
     width: 300px;
-    height: 510px;
+    height: 400px;
     border: 1px solid #95A0A7;
     border-radius: 8px;
     position: relative;
@@ -9,7 +9,7 @@
 
 .course img {
     width: 286px;
-    height: 286px;
+    height: 210px;
     border-radius: 8px;
     margin: 7px;
 }
@@ -30,22 +30,17 @@
     margin-top: 7px;
 }
 
-/* .btn-cart {
+.add-button {
+    /* padding: 15px 60px; */
+    border-radius: 0 0 5px 5px;
+    background-color: #a5a5a5;
+    border: 0;
     width: 100%;
-    background-color: #FFE0B3;
-    border: none;
-    border-radius: 0px 0px 8px 8px;
     position: absolute;
     bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-.btn-cart p {
-    margin-right: 5px;
+.add-button:hover {
+    color: white;
+    background-color: #755959;
 }
-
-.btn-cart:hover {
-    background-color: orange;
-} */
