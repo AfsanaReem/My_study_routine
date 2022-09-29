@@ -1,7 +1,6 @@
 import React from 'react';
-import './Side.css'
-
-const Side = () => {
+import './Sidebar.css'
+const Sidebar = () => {
     return (
         <div className='side-component'>
             <div className='my-info'>
@@ -28,4 +27,4 @@ const Side = () => {
     );
 };
 
-export default Side;
+export default Sidebar;

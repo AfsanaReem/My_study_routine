@@ -1,12 +1,14 @@
-.home {
+.home-container {
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 3fr 1fr;
 }
 
-.body-container {
+.main-container {}
+
+.courses {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 45px;
+    gap: 10px;
     margin: 30px;
 }
 
