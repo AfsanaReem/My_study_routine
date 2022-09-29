@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { addCourseToDb, getStoredCourse } from '../database/localDb';
+import { addCourseToDb, getStoredCourse, getStoredTime, setStoredTime } from '../database/localDb';
 import Courses from './Courses';
 import './Home.css'
+import Question from './Question';
 import Sidebar from './Sidebar';
 const Home = () => {
+
     const [courses, setCourses] = useState([]);
     const [addedTime, setAddedTime] = useState(0);
-    // const [newCourses, setNewCourses] = useState([]);
+    const [newCourses, setNewCourses] = useState([]);
 
     useEffect(() => {
         fetch('courses.json')
@@ -25,14 +27,17 @@ const Home = () => {
                 newArray.push(courseStored);
             }
         }
-        courses(newArray);
+        setNewCourses(newArray);
     }, [courses])
 
     const addToListButton = course => {
         let newAddedTime = addedTime + course.time;
         setAddedTime(newAddedTime);
         addCourseToDb(course.id);
+        setStoredTime(newAddedTime);
     }
+    const storedTime = getStoredTime;
+    console.log(storedTime);
     return (
         <div className='home-container'>
             <div className='main-container'>
@@ -49,9 +54,9 @@ const Home = () => {
                             course={course}
                             key={course.id}
                             addToListButton={addToListButton}
-                        ></Courses>)
-                    }
+                        ></Courses>)}
                 </div>
+                <Question></Question>
             </div>
             <div className='sidebar-container'>
                 <Sidebar addedTime={addedTime}></Sidebar>

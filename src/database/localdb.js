@@ -19,10 +19,16 @@ const addCourseToDb = id => {
 }
 
 const addTimeToDB = time => {
-    localStorage.setItem('break-time', time)
+    localStorage.setItem('breakTime', time)
     return time;
 }
 
+const setStoredTime = (addedTime) => {
+    localStorage.setItem('addedTime', addedTime);
+    return addedTime;
+}
+const getStoredTime = localStorage.addedTime;
+const getBreakTime = localStorage.breakTime;
 const getStoredCourse = () => {
     let addedCourse = {};
     const storedCourse = localStorage.getItem('added-course');
@@ -32,5 +38,5 @@ const getStoredCourse = () => {
     return addedCourse;
 }
 export {
-    addCourseToDb, addTimeToDB, getStoredCourse
+    addCourseToDb, addTimeToDB, getStoredCourse, setStoredTime, getStoredTime, getBreakTime
 }

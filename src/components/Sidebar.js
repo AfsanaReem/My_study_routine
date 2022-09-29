@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { addTimeToDB } from '../database/localDb';
+import { addTimeToDB, getBreakTime } from '../database/localDb';
 import './Sidebar.css'
 const Sidebar = ({ addedTime }) => {
-    const [breakTime, setBreakTime] = useState(0);
+    const storedBreakTime = getBreakTime;
+    const [breakTime, setBreakTime] = useState(storedBreakTime);
     const breakButton = time => {
         setBreakTime(time);
         addTimeToDB(time);
