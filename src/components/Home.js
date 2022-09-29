@@ -8,7 +8,6 @@ const Home = () => {
 
     const [courses, setCourses] = useState([]);
     const [addedTime, setAddedTime] = useState(0);
-    const [newCourses, setNewCourses] = useState([]);
 
     useEffect(() => {
         fetch('courses.json')
@@ -27,7 +26,6 @@ const Home = () => {
                 newArray.push(courseStored);
             }
         }
-        setNewCourses(newArray);
     }, [courses])
 
     const addToListButton = course => {

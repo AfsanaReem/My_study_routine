@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { addTimeToDB, getBreakTime } from '../database/localDb';
-import './Sidebar.css'
+import './Sidebar.css';
+
+// toast.configure();
 const Sidebar = ({ addedTime }) => {
     const storedBreakTime = getBreakTime;
     const [breakTime, setBreakTime] = useState(storedBreakTime);
@@ -8,6 +12,7 @@ const Sidebar = ({ addedTime }) => {
         setBreakTime(time);
         addTimeToDB(time);
     }
+    const notify = () => toast("Wow so easy!");
     return (
         <div className='side-component'>
             <div className='my-info'>
@@ -29,7 +34,8 @@ const Sidebar = ({ addedTime }) => {
             <h3>Study Details</h3>
             <h4 className='header4'>Study Time: {addedTime}hr</h4>
             <h4 className='header4'>Break Time: {breakTime}min</h4>
-            <button className='toast-button'>Study Complete</button>
+            <button onClick={notify} className='toast-button'>Study Complete</button>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };
