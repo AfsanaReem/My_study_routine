@@ -1,21 +1,37 @@
 import React, { useEffect, useState } from 'react';
-import { addToDb } from '../database/localdb';
+import { addCourseToDb, getStoredCourse } from '../database/localDb';
 import Courses from './Courses';
 import './Home.css'
 import Sidebar from './Sidebar';
 const Home = () => {
     const [courses, setCourses] = useState([]);
     const [addedTime, setAddedTime] = useState(0);
+    // const [newCourses, setNewCourses] = useState([]);
 
     useEffect(() => {
         fetch('courses.json')
             .then(res => res.json())
             .then(data => setCourses(data))
     }, [])
+
+    useEffect(() => {
+        const storedCourses = getStoredCourse();
+        const newArray = [];
+        for (const id in storedCourses) {
+            const courseStored = courses.find(course => course.id === id);
+            if (courseStored) {
+                const quantity = storedCourses[id];
+                courseStored.quantity = quantity;
+                newArray.push(courseStored);
+            }
+        }
+        courses(newArray);
+    }, [courses])
+
     const addToListButton = course => {
         let newAddedTime = addedTime + course.time;
         setAddedTime(newAddedTime);
-        addToDb(course.id);
+        addCourseToDb(course.id);
     }
     return (
         <div className='home-container'>

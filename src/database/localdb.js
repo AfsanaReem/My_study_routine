@@ -1,4 +1,4 @@
-const addToDb = id => {
+const addCourseToDb = id => {
     let addedCourse = {};
 
     const storedCourse = localStorage.getItem('added-course');
@@ -20,7 +20,17 @@ const addToDb = id => {
 
 const addTimeToDB = time => {
     localStorage.setItem('break-time', time)
+    return time;
+}
+
+const getStoredCourse = () => {
+    let addedCourse = {};
+    const storedCourse = localStorage.getItem('added-course');
+    if (storedCourse) {
+        addedCourse = JSON.parse(storedCourse);
+    }
+    return addedCourse;
 }
 export {
-    addToDb, addTimeToDB
+    addCourseToDb, addTimeToDB, getStoredCourse
 }

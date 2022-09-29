@@ -1,6 +1,7 @@
 import React from 'react';
 import './Courses.css'
 const Courses = ({ course, addToListButton }) => {
+
     const { img, title, name, time } = course;
     return (
         <div className='course'>

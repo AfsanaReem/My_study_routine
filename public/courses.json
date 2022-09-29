@@ -4,41 +4,47 @@
     "img": "https://www.vikaspublishing.com/uploads/bookimages/vikas-books/9789325981096.jpg",
     "title": "CSE 135",
     "name": "Fundamentals of Computer Programming",
-    "time": 1.5
+    "time": 1.5,
+    "quantity": 0
   },
   {
     "id": "2",
     "img": "https://miro.medium.com/max/1200/1*KpDOKMFAgDWaGTQHL0r70g.png",
     "title": "CSE 225",
     "name": "Data Structure",
-    "time": 2
+    "time": 2,
+    "quantity": 0
   },
   {
     "id": "3",
     "img": "https://pictures.abebooks.com/isbn/9780071289429-us.jpg",
     "title": "CSC 273",
     "name": "Introduction to Theory of Computation",
-    "time": 1
+    "time": 1,
+    "quantity": 0
   },
   {
     "id": "4",
     "img": "https://www.informit.com/ShowCover.aspx?isbn=013600637X",
     "title": "CSE 311",
     "name": "Database Systems",
-    "time": 0.5
+    "time": 0.5,
+    "quantity": 0
   },
   {
     "id": "5",
     "img": "https://apnaahangout.com/wp-content/uploads/2018/03/Software-Engineering-Courses.png",
     "title": "CSE 327",
     "name": "Software Engineering",
-    "time": 0.5
+    "time": 0.5,
+    "quantity": 0
   },
   {
     "id": "6",
     "img": "https://images-na.ssl-images-amazon.com/images/I/51OQZia0jYL.jpg",
     "title": "CSE 482",
     "name": "Internet and Web Technology",
-    "time": 1
+    "time": 1,
+    "quantity": 0
   }
 ]

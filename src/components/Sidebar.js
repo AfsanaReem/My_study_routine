@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { addTimeToDB } from '../database/localdb';
+import { addTimeToDB } from '../database/localDb';
 import './Sidebar.css'
 const Sidebar = ({ addedTime }) => {
     const [breakTime, setBreakTime] = useState(0);
