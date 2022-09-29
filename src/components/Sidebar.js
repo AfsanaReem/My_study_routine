@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
+import { addTimeToDB } from '../database/localdb';
 import './Sidebar.css'
 const Sidebar = ({ addedTime }) => {
     const [breakTime, setBreakTime] = useState(0);
-    const breakButton = time => setBreakTime(time)
+    const breakButton = time => {
+        setBreakTime(time);
+        addTimeToDB(time);
+    }
     return (
         <div className='side-component'>
             <div className='my-info'>

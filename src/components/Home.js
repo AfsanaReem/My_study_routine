@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { addToDb } from '../database/localdb';
 import Courses from './Courses';
 import './Home.css'
 import Sidebar from './Sidebar';
@@ -14,6 +15,7 @@ const Home = () => {
     const addToListButton = course => {
         let newAddedTime = addedTime + course.time;
         setAddedTime(newAddedTime);
+        addToDb(course.id);
     }
     return (
         <div className='home-container'>
